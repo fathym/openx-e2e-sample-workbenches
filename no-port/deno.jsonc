@@ -1,0 +1,11 @@
+{
+  "name": "@fathym/e2e-sample-workbench-no-port",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "imports": {
+    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.900/workbenches"
+  }
+}
