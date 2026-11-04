@@ -1,0 +1,27 @@
+// Test fixtures for OpenX e2e. Not for use.
+//
+// Three tiny workbench packages, one per arm of the workbench inspector's Modes tab and port block
+// that no other public package can show (track 31 rows D31.4.31 and D31.4.38). One workspace, so
+// one `deno publish` here publishes all three at the exact version each member names.
+{
+  "workspace": ["./mcp-custom", "./serves-nothing", "./no-port"],
+  "tasks": {
+    "build": "deno task build:fmt && deno task build:lint && deno task build:check",
+    "build:check": "deno check mcp-custom/mod.ts serves-nothing/mod.ts no-port/mod.ts",
+    "build:fmt": "deno fmt --check",
+    "build:lint": "deno lint",
+    "publish:check": "deno publish --dry-run --allow-dirty"
+  },
+  "compilerOptions": {
+    "strict": true
+  },
+  "fmt": {
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "proseWrap": "preserve",
+    "semiColons": true,
+    "singleQuote": true,
+    "useTabs": false
+  },
+  "lock": false
+}
