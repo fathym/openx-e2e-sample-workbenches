@@ -5,6 +5,8 @@
 // one `deno publish` here publishes all three at the exact version each member names.
 {
   "workspace": ["./mcp-custom", "./serves-nothing", "./no-port"],
+  // Our own fresh @fathym releases resolve at once; skip Deno's 24h dependency-age gate.
+  "minimumDependencyAge": "0",
   "tasks": {
     "build": "deno task build:fmt && deno task build:lint && deno task build:check",
     "build:check": "deno check mcp-custom/mod.ts serves-nothing/mod.ts no-port/mod.ts",
