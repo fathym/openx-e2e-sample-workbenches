@@ -6,6 +6,6 @@
     ".": "./mod.ts"
   },
   "imports": {
-    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.900/workbenches"
+    "@fathym/fai/workbenches": "jsr:@fathym/fai@0.0.1005/workbenches"
   }
 }
